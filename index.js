@@ -60,7 +60,7 @@ app.post('/webhook/', function (req, res) {
 			//}else{
             	//answer = "Hem biết :3"
 			//}
-			if(text.match(/dịch giúp|dịch hộ/i)) {var str = answer.substring(text.lastIndexOf(":")+1,answer.length);answer = 'Nghĩa của nó đây http://translate.google.com.vn/m?hl=vi&sl=auto&tl=vi&ie=UTF-8&prev=_m&q='+str}
+			if(text.match(/dịch giúp|dịch hộ/i)) {var str = answer.substring(text.lastIndexOf(":")+1,answer.length);answer = 'Nghĩa của nó đây http://translate.google.com.vn/m?hl=vi&sl=auto&tl=vi&ie=UTF-8&prev=_m&q='+str;}
 else if(text.match(/tìm giúp/i)) {answer = 'Hình như là ở đây thì phải <a href="http://www.google.com/m?channel=new&q='+x.substr(15)+'">'+x.substr(15)+'</a> Thank tớ nhá.'}
 else if(text.match(/nick avatar/i)) {answer = 'Haha , nick của ai mà xấu quá vậy %lname%<br/> <img src="http://27.0.14.78/services/avatar/image/'+x.substr(12)+'.gif" width="50"/>'}
 else if(text.match(/(bot là thằng ngu|bot ngốc|bot ngu wa|bot ngu quá)/i)) {answer = 'Her her. Hum biết ai ngu àh? Có giải dùm được câu trên nhút nhít dưới nhút nhít trên sung sướng dưới đau khổ không?'}
