@@ -38,10 +38,10 @@ app.post('/webhook/', function (req, res) {
         let sender = event.sender.id
         if (event.message && event.message.text) {
             let text = event.message.text
-	    if (text.indexOf("Hưng")){
+	    if (text.indexOf("Hưng") != -1){
 		sendTextMessage(sender, "Hưng làm ra tớ đấy :3")
 	    }else{
-            	sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+            	sendTextMessage(sender, "Hem biết :3")
 	    }        
 	}
     }
