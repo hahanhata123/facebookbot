@@ -55,13 +55,13 @@ app.post('/webhook/', function (req, res) {
 				//answer = "Chào em"
 			//}else if (text.indexOf("dịch hộ") != -1 || text.indexOf("dịch giúp") != -1 ){
 				//var i = text.lastIndexOf(":")
-				//answer = answer.substring(i+1,answer.length)
-				//answer = "http://translate.google.com.vn/m?hl=vi&sl=auto&tl=vi&ie=UTF-8&prev=_m&q="+answer
+				//answer = answer.substring(text.lastIndexOf(":")+1,answer.length)
+				//answer = "http://translate.google.com.vn/m?hl=vi&sl=auto&tl=vi&ie=UTF-8&prev=_m&q="+answer.substring(text.lastIndexOf(":")+1,answer.length)
 			//}else{
             	//answer = "Hem biết :3"
 			//}
-			if(text.match(/bot dịch giúp/i)) {answer = 'Nghĩa của nó đây <a href="http://translate.google.com.vn/m?hl=vi&sl=auto&tl=vi&ie=UTF-8&prev=_m&q='+x.substr(16)+'">'+x.substr(16)+'</a> Thank tớ nhá.'}
-else if(text.match(/bot tìm giúp/i)) {answer = 'Hình như là ở đây thì phải <a href="http://www.google.com/m?channel=new&q='+x.substr(15)+'">'+x.substr(15)+'</a> Thank tớ nhá.'}
+			if(text.match(/dịch giúp|dịch hộ/i)) {answer = 'Nghĩa của nó đây http://translate.google.com.vn/m?hl=vi&sl=auto&tl=vi&ie=UTF-8&prev=_m&q='+answer.substring(text.lastIndexOf(":")+1,answer.length)}
+else if(text.match(/tìm giúp/i)) {answer = 'Hình như là ở đây thì phải <a href="http://www.google.com/m?channel=new&q='+x.substr(15)+'">'+x.substr(15)+'</a> Thank tớ nhá.'}
 else if(text.match(/nick avatar/i)) {answer = 'Haha , nick của ai mà xấu quá vậy %lname%<br/> <img src="http://27.0.14.78/services/avatar/image/'+x.substr(12)+'.gif" width="50"/>'}
 else if(text.match(/(bot là thằng ngu|bot ngốc|bot ngu wa|bot ngu quá)/i)) {answer = 'Her her. Hum biết ai ngu àh? Có giải dùm được câu trên nhút nhít dưới nhút nhít trên sung sướng dưới đau khổ không?'}
 else if(text.match(/nội dung sai/i)) {answer = 'He he. Chết mày chưa cho mày chừa. Dám nói bậy'}
