@@ -37,9 +37,11 @@ app.post('/webhook/', function (req, res) {
         let event = req.body.entry[0].messaging[i]
         let sender = event.sender.id
         if (event.message && event.message.text) {
-            let text = event.message.text
-	    if (text.indexOf("Hưng") != -1){
-		sendTextMessage(sender, "Hưng làm ra tớ đấy :3")
+            let text = event.message.text.toLowerCase();
+	    if (text.indexOf("hưng") != -1){
+		sendTextMessage(sender, "Hưng là người làm ra tớ đấy :3")
+	    }else if ((text.indexOf("chào") != -1 && text.indexOf("anh") != -1) || (text.indexOf("chào") != -1)){
+		sendTextMessage(sender, "Chào em")
 	    }else{
             	sendTextMessage(sender, "Hem biết :3")
 	    }        
