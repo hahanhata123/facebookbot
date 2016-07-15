@@ -44,10 +44,18 @@ app.post('/webhook/', function (req, res) {
 				answer = "Hưng là người làm ra tớ đấy :3"
 			}else if ((text.indexOf("chào") != -1 && text.indexOf("anh") != -1) || (text.indexOf("chào") != -1)){
 				answer = "Chào em"
-			}else if (text.indexOf("chào") != -1 && text.indexOf("em") != -1){
+			}else if (text.indexOf("em cái") != -1){
+				answer = "Ý kiến à?"
+			}else if ((text.indexOf("chào") != -1 && text.indexOf("em") != -1) || text.indexOf("em") != -1 && text.indexOf("ơi") != -1)){
 				answer = "Em em cái cc nhé :^)"
 			}else if ((text.indexOf("chào") != -1 && text.indexOf("anh") != -1) || (text.indexOf("chào") != -1)){
 				answer = "Chào em"
+			}else if ((text.indexOf("chào") != -1 && text.indexOf("anh") != -1) || (text.indexOf("chào") != -1)){
+				answer = "Chào em"
+			}else if (text.indexOf("dịch hộ") != -1 || text.indexOf("dịch giúp") != -1 ){
+				var i = text.indexOf(":");
+				answer = answer.substring(i+1,answer.length);
+				answer = "http://translate.google.com.vn/m?hl=vi&sl=auto&tl=vi&ie=UTF-8&prev=_m&q="+answer;
 			}else{
             	answer = "Hem biết :3"
 			}
