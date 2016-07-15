@@ -53,9 +53,9 @@ app.post('/webhook/', function (req, res) {
 			}else if ((text.indexOf("chào") != -1 && text.indexOf("anh") != -1) || (text.indexOf("chào") != -1)){
 				answer = "Chào em"
 			}else if (text.indexOf("dịch hộ") != -1 || text.indexOf("dịch giúp") != -1 ){
-				var i = text.indexOf(":");
-				answer = answer.substring(i+1,answer.length);
-				answer = "http://translate.google.com.vn/m?hl=vi&sl=auto&tl=vi&ie=UTF-8&prev=_m&q="+answer;
+				var i = text.lastIndexOf(":")
+				answer = answer.substring(i+1,answer.length)
+				answer = "http://translate.google.com.vn/m?hl=vi&sl=auto&tl=vi&ie=UTF-8&prev=_m&q="+answer
 			}else{
             	answer = "Hem biết :3"
 			}
