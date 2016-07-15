@@ -45,7 +45,9 @@ app.post('/webhook/', function (req, res) {
 var token = "EAAY7XUPxKToBAOtZAbMmZBZCZCJoUBQvbaG2ebegPDEHaY5aGdnklR7dttvhepiwppRLBQojGNZCpoN2rK6KMymah2xP30EtKz8dRPUoC6UltC3xF9avIMAt1WVGK6mhjFTdt5dfgyPOWPYPMfKDk9ROTEmKSBeEZA62QZBWxshJQZDZD"
 
 function sendTextMessage(sender, text) {
-    let messageData = { text:text }
+    messageData = {
+        text:text
+    }
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: {access_token:token},
@@ -61,3 +63,5 @@ function sendTextMessage(sender, text) {
             console.log('Error: ', response.body.error)
         }
     })
+}
+
