@@ -40,11 +40,7 @@ app.listen(app.get('port'), function() {
             sendGenericMessage(sender)
             continue
         }
-        if (text.contains("Hưng"){
-			sendTextMessage(sender, "Hưng làm ra tớ đấy :3")
-		}else{
-			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
-		}
+		sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
