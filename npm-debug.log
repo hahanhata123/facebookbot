@@ -1,0 +1,98 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'npm',
+1 verbose cli   '–g' ]
+2 info using npm@3.9.5
+3 info using node@v6.2.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData npm
+8 silly fetchPackageMetaData –g
+9 silly fetchNamedPackageData npm
+10 silly mapToRegistry name npm
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'npm',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   name: 'npm',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/npm
+15 silly fetchOtherPackageData –g
+16 silly cache add args [ '–g', null ]
+17 verbose cache add spec –g
+18 verbose request uri https://registry.npmjs.org/npm
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 10:06:03 AM
+21 verbose request id cd9754fa90f1ca99
+22 http request GET https://registry.npmjs.org/npm
+23 silly cache add parsed spec Result {
+23 silly cache add   raw: '–g',
+23 silly cache add   scope: null,
+23 silly cache add   name: null,
+23 silly cache add   rawSpec: '–g',
+23 silly cache add   spec: '/home/scit/Chrome Extention/–g',
+23 silly cache add   type: 'local' }
+24 info retry will retry, error on last attempt: TypeError: The header content contains invalid characters
+25 error addLocal Could not install /home/scit/Chrome Extention/–g
+26 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/home/scit/Chrome Extention/–g'
+26 silly fetchPackageMetaData     at Error (native)
+26 silly fetchPackageMetaData  error for –g { Error: ENOENT: no such file or directory, open '/home/scit/Chrome Extention/–g'
+26 silly fetchPackageMetaData     at Error (native)
+26 silly fetchPackageMetaData   errno: -2,
+26 silly fetchPackageMetaData   code: 'ENOENT',
+26 silly fetchPackageMetaData   syscall: 'open',
+26 silly fetchPackageMetaData   path: '/home/scit/Chrome Extention/–g' }
+27 info attempt registry request try #2 at 10:06:13 AM
+28 http request GET https://registry.npmjs.org/npm
+29 info retry will retry, error on last attempt: TypeError: The header content contains invalid characters
+30 info attempt registry request try #3 at 10:07:13 AM
+31 http request GET https://registry.npmjs.org/npm
+32 silly fetchPackageMetaData TypeError: The header content contains invalid characters
+32 silly fetchPackageMetaData     at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:348:11)
+32 silly fetchPackageMetaData     at new ClientRequest (_http_client.js:85:14)
+32 silly fetchPackageMetaData     at Object.exports.request (http.js:31:10)
+32 silly fetchPackageMetaData     at Object.exports.request (https.js:199:15)
+32 silly fetchPackageMetaData     at Request.start (/usr/local/lib/node_modules/npm/node_modules/request/request.js:753:32)
+32 silly fetchPackageMetaData     at Request.end (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1418:10)
+32 silly fetchPackageMetaData     at end (/usr/local/lib/node_modules/npm/node_modules/request/request.js:580:14)
+32 silly fetchPackageMetaData     at Immediate._onImmediate (/usr/local/lib/node_modules/npm/node_modules/request/request.js:594:7)
+32 silly fetchPackageMetaData     at tryOnImmediate (timers.js:543:15)
+32 silly fetchPackageMetaData     at processImmediate [as _immediateCallback] (timers.js:523:5)
+32 silly fetchPackageMetaData  error for npm TypeError: The header content contains invalid characters
+32 silly fetchPackageMetaData     at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:348:11)
+32 silly fetchPackageMetaData     at new ClientRequest (_http_client.js:85:14)
+32 silly fetchPackageMetaData     at Object.exports.request (http.js:31:10)
+32 silly fetchPackageMetaData     at Object.exports.request (https.js:199:15)
+32 silly fetchPackageMetaData     at Request.start (/usr/local/lib/node_modules/npm/node_modules/request/request.js:753:32)
+32 silly fetchPackageMetaData     at Request.end (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1418:10)
+32 silly fetchPackageMetaData     at end (/usr/local/lib/node_modules/npm/node_modules/request/request.js:580:14)
+32 silly fetchPackageMetaData     at Immediate._onImmediate (/usr/local/lib/node_modules/npm/node_modules/request/request.js:594:7)
+32 silly fetchPackageMetaData     at tryOnImmediate (timers.js:543:15)
+32 silly fetchPackageMetaData     at processImmediate [as _immediateCallback] (timers.js:523:5)
+33 silly rollbackFailedOptional Starting
+34 silly rollbackFailedOptional Finishing
+35 silly runTopLevelLifecycles Starting
+36 silly runTopLevelLifecycles Finishing
+37 silly install printInstalled
+38 verbose stack Error: ENOENT: no such file or directory, open '/home/scit/Chrome Extention/–g'
+38 verbose stack     at Error (native)
+39 verbose cwd /home/scit/Chrome Extention
+40 error Linux 4.2.0-41-generic
+41 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "npm" "–g"
+42 error node v6.2.2
+43 error npm  v3.9.5
+44 error path /home/scit/Chrome Extention/–g
+45 error code ENOENT
+46 error errno -2
+47 error syscall open
+48 error enoent ENOENT: no such file or directory, open '/home/scit/Chrome Extention/–g'
+49 error enoent ENOENT: no such file or directory, open '/home/scit/Chrome Extention/–g'
+49 error enoent This is most likely not a problem with npm itself
+49 error enoent and is related to npm not being able to find a file.
+50 verbose exit [ -2, true ]
